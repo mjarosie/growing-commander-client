@@ -6,6 +6,11 @@ application trough available REST API.
 
 Application is written in python 2.7, since Adafruit drivers are fully compatible only with python 2.7.
 
+### Setup and currently supported sensors
+
+Application was tested on Raspberry Pi 3. Sensors connected to the device:
+
+- AM2302 powered with 3.3V (GPIO 4)
 
 ### Running tests
 
