@@ -1,6 +1,6 @@
 class MeasurementSource():
-	def __init__(self):
-		pass
+	def __init__(self, device_unique_name):
+		self.device_unique_name = device_unique_name
 
 	def get_reading(self):
 		pass

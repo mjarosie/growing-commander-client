@@ -12,10 +12,11 @@ class TestMeasureReader(unittest.TestCase):
 		
 	def test_add_source(self):
 		mr = MeasurementReader(timedelta(seconds=10), 1)
-		new_source = MeasurementSource()
+		new_source = MeasurementSource("Device 1")
 		mr.add_source(new_source)
 		self.assertEqual(len(mr.sources), 1)
-		self.assertIs(mr.sources[0], new_source)
+		self.assertIs(mr.sources["Device 1"], new_source)
+		self.assertEqual(mr.sources["Device 1"].device_unique_name, "Device 1")
 
 if __name__ == '__main__':
 	unittest.main()
