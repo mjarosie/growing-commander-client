@@ -9,11 +9,8 @@ def run():
 	mr = MeasurementReader(timedelta(seconds=10), 2)
 	temperature_source = DhtThermometer('Thermometer 1', 4)
 	mr.add_source(temperature_source)
-	(humidity, temperature) = temperature_source.get_reading()
-	if humidity is not None and temperature is not None:
-		print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
-	else:
-		print('Failed to get reading. Try again!')
+	
+	mr.start_to_measure()
 
 if __name__ == '__main__':
 	run()
