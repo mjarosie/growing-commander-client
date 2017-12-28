@@ -6,7 +6,7 @@ import Adafruit_DHT
 from measurement_reader import MeasurementReader
 
 def run():
-	mr = MeasurementReader(timedelta(seconds=10), 2)
+	mr = MeasurementReader(timedelta(seconds=60), timedelta(seconds=10), 2)
 	temperature_source = DhtThermometer('Thermometer 1', 4)
 	mr.add_source(temperature_source)
 	
