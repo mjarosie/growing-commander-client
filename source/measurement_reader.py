@@ -39,11 +39,8 @@ class MeasurementReader():
 		'''
 		results = pd.DataFrame()
 		for i in xrange(self.number_of_measurements):
-			timestamp = datetime.now()
 			result = self.get_measurements()
-			result['timestamp'] = timestamp
 			results = results.append(result)
-			
 			time.sleep(1.0 * self.duration.total_seconds()/self.number_of_measurements)
 		return results
 
