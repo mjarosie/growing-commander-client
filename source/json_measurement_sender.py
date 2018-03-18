@@ -50,7 +50,9 @@ class JsonMeasurementSender(MeasurementSender):
             self.log.error('Incorrect response from the server while obtaining authentication token.')
             return None
 
-    def send(self, data):
+    def send(self, raw_data):
+        data = raw_data.to_json(orient='index', force_ascii=False, date_format='iso')
+
         if self.authentication_token is None:
             self.authentication_token = self.get_auth_token()
 
