@@ -4,8 +4,6 @@ This is the application for gathering the growing measurement using multiple sen
 aggregate them and send them to the [Growing Commander Server](https://github.com/mjarosie/growing-commander-server)
 application trough available REST API.
 
-Application is written in python 2.7, since Adafruit drivers are fully compatible only with python 2.7.
-
 ### Setup and currently supported sensors
 
 Application was tested on Raspberry Pi 3. Sensors connected to the device:
