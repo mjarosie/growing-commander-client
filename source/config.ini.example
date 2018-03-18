@@ -1,0 +1,11 @@
+[measurement-server]
+login = example_login
+password = example_password
+protocol = http
+address = 192.0.2.0
+port = 5000
+api_version = v1
+
+[measurements]
+measurement_idle_time = 60
+measurement_duration = 10
